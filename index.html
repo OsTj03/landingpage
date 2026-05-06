@@ -16,6 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NicaMuscle - Descuento Exclusivo en Proteína</title>
+
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,12 +115,11 @@
             </div>
         </section>
 
-        <!-- Stats / Highlight Section -->
+        <!-- Stats Section -->
         <section id="nutricion" class="stats-section container">
             <div class="stats-content animate slide-up">
                 <h2>El combustible perfecto para tu cuerpo</h2>
-                <p>Cada porción está diseñada para brindarte los macronutrientes esenciales que necesitas, sin los
-                    aditivos que no deseas.</p>
+                <p>Cada porción está diseñada para brindarte los macronutrientes esenciales que necesitas.</p>
 
                 <div class="stat-highlight-card glass-card">
                     <div class="rank-badge">Perfil Nutricional Premium</div>
@@ -157,7 +157,7 @@
             </div>
         </section>
 
-        <!-- CTA Section with Registration Form Placeholder -->
+        <!-- CTA Section with Registration Form -->
         <section id="registro" class="cta-section container animate fade-in">
             <div class="cta-box glass-card">
                 <h2>¡No dejes escapar tu 20% OFF!</h2>
@@ -191,7 +191,13 @@
                             <option value="informacion">Solo busco información</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large w-100">Obtener mi Cupón</button>
+
+                    <!-- Botón con disparador manual para Google Tag Manager -->
+                    <button type="submit"
+                        onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'registro_manual'});"
+                        class="btn btn-primary btn-large w-100">
+                        Obtener mi Cupón
+                    </button>
                 </form>
                 <p class="terms-text">*Válido solo para nuevos usuarios. Aplican términos y condiciones.</p>
             </div>
@@ -202,8 +208,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <div class="logo">Nica<strong>Muscle</strong></div>
-                <p>Nutrición deportiva de élite para verdaderos campeones. Eleva tus estándares, eleva tus resultados.
-                </p>
+                <p>Nutrición deportiva de élite para verdaderos campeones.</p>
             </div>
             <div class="footer-links">
                 <a href="#">Tienda</a>
