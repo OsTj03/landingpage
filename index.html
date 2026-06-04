@@ -167,18 +167,18 @@
                 <p>Crea tu cuenta ahora mismo y te enviaremos tu cupón de descuento directamente a tu correo
                     electrónico.</p>
 
-                <form class="registro-form">
+                <form class="registro-form" id="gym-lead-form">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Tu Nombre Completo" required>
+                        <input type="text" id="nombre" class="form-control" placeholder="Tu Nombre Completo" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Tu Correo Electrónico" required>
+                        <input type="email" id="email" class="form-control" placeholder="Tu Correo Electrónico" required>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Tu Edad" min="16" max="100" required>
+                        <input type="number" id="edad" class="form-control" placeholder="Tu Edad" min="16" max="100" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" required>
+                        <select id="intereses" class="form-control" required>
                             <option value="" disabled selected>Tus Intereses Principales</option>
                             <option value="hipertrofia">Ganar Masa Muscular</option>
                             <option value="perdida_peso">Pérdida de Grasa</option>
@@ -187,7 +187,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" required>
+                        <select id="intencion_compra" class="form-control" required>
                             <option value="" disabled selected>Intención de Compra</option>
                             <option value="inmediata">Comprar Ahora</option>
                             <option value="proximo_mes">Comprar el próximo mes</option>
@@ -224,6 +224,8 @@
         </div>
     </footer>
 
+    <!-- SDK de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
