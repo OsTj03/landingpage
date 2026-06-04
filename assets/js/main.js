@@ -5,7 +5,7 @@
 // Inicializar cliente de Supabase
 const supabaseUrl = 'https://nsoxrbbptimfuxhprowv.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zb3hyYmJwdGltaWZ1eGhwcm93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1OTkwNTksImV4cCI6MjA5NjE3NTA1OX0.IzFbjN0qEHEhjmaSb6xg_2YnsZyS96GakKUOXHvlQeE'; // <-- Reemplaza esto con tu anon public key de Supabase
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Navbar Scroll Effect
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.textContent = 'Enviando...';
 
             try {
-                const { data, error } = await supabase
+                const { data, error } = await supabaseClient
                     .from('leads')
                     .insert([
                         {
